@@ -71,6 +71,27 @@ button:hover, button:focus, a:hover, a:focus {
 
 ul {
     list-style-type: none;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1128px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.hero, .principles, .team, .portfolio {
+    padding: 60px 0; 
+}
+
+.team-title, .portfolio-section-title {
+    margin-bottom: 72px;
 }
 
 .logo {
@@ -82,6 +103,7 @@ ul {
     text-transform: uppercase;
     color: var(--iris);
     text-decoration: none;
+    margin-right: 76px;
 }
 
 .logo-accent {
@@ -96,16 +118,40 @@ ul {
 }
 
 /* #header */
+.header .container {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .nav-link {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     color: var(--navy-blue);
     text-decoration: none;
+    padding: 24px 0;
 }
 
 .contact-info {
     font-style: normal;
+    margin-left: auto;
+}
+
+.contact-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .contact-link {
@@ -138,8 +184,21 @@ ul {
 }
 
 /* #principles */
-.principles > h2 {
-    visibility: hidden;
+.principles .section-title {
+    display: none;
+}
+
+.principles-list {
+    display: flex;
+    gap: 24px;
+}
+
+.principles-item {
+   width: 264px; 
+}
+
+.principle-title {
+    margin-bottom: 8px;
 }
 
 .principle-description {
@@ -149,6 +208,11 @@ ul {
 /* #team */
 .team {
     background-color: var(--cloud);
+}
+
+.team-list {
+    display: flex;
+    gap: 24px;
 }
 
 .team-member {
@@ -164,6 +228,32 @@ ul {
 }
 
 /* #portfolio */
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.portfolio-item {
+    flex: 1 1 calc(33.33% - 24px);
+}
+
+.portfolio-desc-container {
+    border-left: 1px solid var(--cornflower);
+    border-right: 1px solid var(--cornflower);
+    border-bottom: 1px solid var(--cornflower);
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-title {
+    margin: 32px auto 8px 16px;
+}
+
+.portfolio-category {
+    margin: 0 0 32px 16px;
+}
 
 /* #footer */
 .footer {
