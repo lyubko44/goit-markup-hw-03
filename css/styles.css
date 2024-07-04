@@ -122,10 +122,12 @@ img {
     width: 1px;
     height: 1px;
     margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
     border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* #header */
@@ -177,7 +179,7 @@ img {
     letter-spacing: 0.02em;
 }
 
-/* #hero */
+/* #hero 1 */
 .hero {
     background: var(--navy-blue);
     padding: 188px 0;
@@ -205,7 +207,7 @@ img {
     background-color: var(--ocean);
 }
 
-/* #principles */
+/* #principles 2 */
 
 .principles-list {
     display: flex;
@@ -233,7 +235,7 @@ img {
     font-weight: 400;
 }
 
-/* #team */
+/* #team 3 */
 .team {
     background-color: var(--cloud);
 }
@@ -244,7 +246,7 @@ img {
 }
 
 .team-desc-container {
-    margin: 32px 0;
+    padding: 32px 0;
 }
 
 .team-member {
@@ -261,7 +263,7 @@ img {
     text-align: center;
 }
 
-/* #portfolio */
+/* #portfolio 4 */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -293,17 +295,13 @@ img {
     padding: 100px 0
 }
 
-.footer .container {
-    display: flex;
-    flex-direction: column;
-}
-
 .logo-footer {
     color: var(--iris);
     margin-bottom: 16px;
     margin-left: right;
     display: inline-block;
 }
+
 .logo-footer-accent {
     color: var(--cloud);
 }
