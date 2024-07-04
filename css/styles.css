@@ -81,7 +81,7 @@ img {
 }
 
 .container {
-    width: 1128px;
+    width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -215,8 +215,13 @@ img {
     gap: 24px;
 }
 
+.team-desc-container {
+    margin: 32px 16px;
+}
+
 .team-member {
     background-color: var(--white);
+    border-radius: 4px;
 }
 
 .team-name {
@@ -258,12 +263,25 @@ img {
 /* #footer */
 .footer {
     color: var(--cloud);
-    background: var(--navy-blue)
+    background: var(--navy-blue);
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
 }
 
 .logo-footer {
     color: var(--iris);
+    margin: 100px auto 16px 0;
+    margin-top: 100px;
+    margin-left: right;
 }
 .logo-footer-accent {
     color: var(--cloud);
+}
+
+.footer-text {
+    margin: 0 0 100px 0;
+    width: 264px;
 }
