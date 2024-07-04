@@ -86,8 +86,8 @@ img {
     margin: 0 auto;
 }
 
-.hero, .principles, .team, .portfolio {
-    padding: 60px 0; 
+.principles, .team, .portfolio {
+    padding: 120px 0
 }
 
 .team-title, .portfolio-section-title {
@@ -117,7 +117,22 @@ img {
     color: var(--navy-blue);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 /* #header */
+.header {
+    border-bottom: 1px solid #e7e9fc
+}
+
 .header .container {
     display: flex;
 }
@@ -165,18 +180,25 @@ img {
 /* #hero */
 .hero {
     background: var(--navy-blue);
+    padding: 188px 0;
 }
 
 .hero-title {
     color: var(--white);
     line-height: 1.07;
     text-align: center;
+    max-width: 496px;
 }
 
 .btn-order {
     background: var(--iris);
     letter-spacing: 0.04em;
     cursor: pointer;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
 }
 
 .btn-order:hover, button:focus {
@@ -184,17 +206,23 @@ img {
 }
 
 /* #principles */
-.principles .section-title {
-    display: none;
-}
 
 .principles-list {
     display: flex;
     gap: 24px;
 }
 
-.principles-item {
-   width: 264px; 
+.principle-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    box-sizing: border-box;
+}
+
+.principle-item:first-child {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+.principle-item:last-child {
+    margin-right: 0;
 }
 
 .principle-title {
@@ -216,16 +244,17 @@ img {
 }
 
 .team-desc-container {
-    margin: 32px 16px;
+    margin: 32px 0;
 }
 
 .team-member {
     background-color: var(--white);
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
 }
 
 .team-name {
     text-align: center;
+    margin-bottom: 8px;
 }
 
 .team-role {
@@ -250,20 +279,18 @@ img {
     border-bottom: 1px solid var(--cornflower);
     display: flex;
     flex-direction: column;
+    padding: 32px 16px;
 }
 
 .portfolio-title {
-    margin: 32px auto 8px 16px;
-}
-
-.portfolio-category {
-    margin: 0 0 32px 16px;
+    margin-bottom: 8px;
 }
 
 /* #footer */
 .footer {
     color: var(--cloud);
     background: var(--navy-blue);
+    padding: 100px 0
 }
 
 .footer .container {
@@ -273,15 +300,14 @@ img {
 
 .logo-footer {
     color: var(--iris);
-    margin: 100px auto 16px 0;
-    margin-top: 100px;
+    margin-bottom: 16px;
     margin-left: right;
+    display: inline-block;
 }
 .logo-footer-accent {
     color: var(--cloud);
 }
 
 .footer-text {
-    margin: 0 0 100px 0;
     width: 264px;
 }
